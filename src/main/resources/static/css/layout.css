@@ -1,0 +1,91 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    width: 100vw;
+    
+}
+
+.title {
+    grid-column: 3;
+    text-align: center;
+}
+.log-out  {
+    margin-left: auto;
+    grid-column: 5;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+.dealer-area {
+    display: grid;
+    width:50%;
+    grid-template-rows: 1fr 2.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.player-area {
+    display: grid;
+    grid-template-rows: 1fr 2.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 50%;
+}
+
+.player-card {
+    grid-row: 2;
+}
+
+.dealer-card {
+    grid-row: 2;
+}
+
+.dealer {
+    margin-left: 0;
+}
+
+.you {
+    margin-left: 0;
+}
+
+.chips {
+    grid-row:1;
+    grid-column: 5;
+    text-align: left;
+    margin: 50px 30px 0px 0px;
+}
+
+.buttons  {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button {
+margin: 30px 15px 0px 15px;
+}
+
+.hit {
+    grid-column:1;
+
+}
+
+.stand {
+    grid-column:2;
+}
+
+.split {
+    grid-column:3;
+}
+
+.bet {
+    grid-column:4;
+}
+
+.bet-amount{
+    grid-column:4;
+    margin: 30px 15px 0px 15px;
+}

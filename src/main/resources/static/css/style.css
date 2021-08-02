@@ -1,0 +1,33 @@
+html {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+*{
+    color: white;
+    margin: 0;
+}
+
+
+h1 {
+    margin: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100px;
+}
+
+button {
+    color:black;
+}
+
+input {
+    color:black;
+}
