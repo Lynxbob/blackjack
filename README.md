@@ -1,3 +1,6 @@
 Welcome to my blackjack game for the hackathon! 
 
-works just like regular blackjack, will upload link to readme later.
+https://blackjackdemo.herokuapp.com/
+
+Here are the rules I used for blackjack at this link:
+https://bicyclecards.com/how-to-play/blackjack/
