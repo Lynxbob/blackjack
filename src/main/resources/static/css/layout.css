@@ -31,13 +31,17 @@
 
 .player-area {
     display: grid;
-    grid-template-rows: 1fr 2.5fr;
+    grid-template-rows: 1fr 2fr  .125fr 1.875fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 50%;
 }
 
 .player-card {
     grid-row: 2;
+}
+
+.player-card-split {
+    grid-row: 4;
 }
 
 .dealer-card {
@@ -61,7 +65,7 @@
 
 .buttons  {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 button {
@@ -83,9 +87,42 @@ margin: 30px 15px 0px 15px;
 
 .bet {
     grid-column:4;
+    grid-row: 2;
 }
 
 .bet-amount{
     grid-column:4;
     margin: 30px 15px 0px 15px;
+}
+
+.card-sum {
+    grid-column: 2;
+    margin: 50px 20px 0px 20px;
+    text-align: left;
+}
+
+.card-sum-split {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: left;
+}
+
+.double-down {
+    grid-row: 2;
+
+}
+
+.reset-chips {
+    grid-row: 2;
+
+}
+
+.insurance {
+    grid-row: 2;
+}
+
+.no-insurance {
+    grid-row: 2;
+
+    
 }
