@@ -1,5 +1,5 @@
 html {
-    background-image: url("../images/background.jpg");
+    background-image: url("/images/background.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -30,4 +30,9 @@ button {
 
 input {
     color:black;
+}
+
+.leaderboard-title {
+    font-size: 80px;
+    text-align: center;
 }

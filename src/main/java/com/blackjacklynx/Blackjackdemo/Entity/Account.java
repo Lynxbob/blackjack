@@ -35,6 +35,10 @@ public class Account {
         return id;
     }
 
+    public void setChips(int chips) {
+        this.chips = chips;
+    }
+
     public String getUsername() {
         return username;
     }

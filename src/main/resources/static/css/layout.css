@@ -8,11 +8,13 @@
 
 .title {
     grid-column: 3;
+    grid-row: 1;
     text-align: center;
 }
 .log-out  {
     margin-left: auto;
     grid-column: 5;
+    grid-row: 1;
 }
 
 .container {
@@ -125,4 +127,41 @@ margin: 30px 15px 0px 15px;
     grid-row: 2;
 
     
+}
+
+.leaderboard {
+    grid-column: 1;
+}
+
+.leaderboard-section {
+    width: 50%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.leaderboard-title {
+    grid-column:2/4;
+}
+
+.username {
+    grid-row: 2;
+    margin: 15px;
+}
+.leaderboard-chips {
+    grid-row: 2;
+    grid-column: 2;
+    margin: 15px 15px 15px 75px;
+}
+
+.username-leaderboard {
+    grid-column: 1;
+    margin: 15px;
+}
+.chip-count-leaderboard {
+    grid-column: 2;
+    margin: 15px 15px 15px 75px;
+}
+.rules {
+    grid-column: 4;
+    text-align: right;
 }

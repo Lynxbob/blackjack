@@ -18,6 +18,9 @@ public class AccountStorage{
     }
     public Account retrieveAccountById(Long id) { return accountRepo.findById(id).get();}
     public void deleteAccountById(Long id) {accountRepo.deleteById(id);}
+    public Iterable<Account> retrieveAllAccounts() {
+        return accountRepo.findAll();
+    }
 
     public Account retrieveAccountByUsername(String username) {
         return accountRepo.findByUsername(username).get();

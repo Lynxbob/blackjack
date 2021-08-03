@@ -1,4 +1,5 @@
-let chipCount = 5000;
+let chipCount = 1;
+fetchChipCount();
 let dealer = new Dealer();
 let betAmount = document.querySelector(".bet-amount");
 let chipCounter = document.querySelector(".chips");
@@ -312,7 +313,7 @@ function startRound() {
 //cardOwner is either a string for player or dealer 
 function createImageOfCard(cardName, cardOwner, isCardBack) {
     let cardElement = document.createElement("img");
-    cardElement.src = "../static/images/" + cardName + ".png";
+    cardElement.src = "/images/" + cardName + ".png";
     if(isCardBack) {
         cardBackImg = cardElement;
     }
@@ -336,7 +337,7 @@ function createImageOfCard(cardName, cardOwner, isCardBack) {
 
 function revealDealerCard() {
     let dealerCard = dealer.dealerCards[0];
-    cardBackImg.src = "../static/images/" + dealerCard.name + ".png";
+    cardBackImg.src = "/images/" + dealerCard.name + ".png";
     
 }
 
@@ -385,6 +386,8 @@ function clearBoard(boardToClear) {
 
 function updateChipCount() {
     chipCounter.innerHTML = "Chips: " + chipCount;
+    sendHttpRequestForChipCount();
+
 }
 
 function checkForSplit() {
@@ -433,7 +436,7 @@ function checkForDealerBlackJack() {
     }
     else {
         checkForSplit();
-        //checkForDoubleDown()
+        checkForDoubleDown()
         hitButton.disabled = false;
         standButton.disabled = false;
         checkForBlackjack();
@@ -470,5 +473,23 @@ function checkForResetChips() {
     }
 }
 
+async function fetchChipCount() {
+    chipCount = await fetch("/api/chips", {
+        method: "GET"
+
+    }).then(response => response.json());
+    updateChipCount();
+}
+
+function sendHttpRequestForChipCount() {
+    let request = new XMLHttpRequest();
+    let formData = new FormData();
+    formData.append("chipCount", chipCount);
+    request.open("POST", "/api/chips");
+    request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    request.send(formData);
+
+    
+}
 
 checkForResetChips();
