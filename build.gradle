@@ -7,7 +7,7 @@ plugins {
 group = 'com.blackjacklynx'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
-
+apply plugin: 'war'
 repositories {
 	mavenCentral()
 }
@@ -29,3 +29,17 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+war {
+	enabled=true //WARDEPLOY
+}
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+	into "$buildDir/libs"
+	from(configurations.compile)
+}
+
+stage.dependsOn(copyToLib)
